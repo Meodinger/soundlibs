@@ -1,17 +1,27 @@
 <?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
+
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
-        <artifactId>soundlibs</artifactId>
-        <groupId>com.googlecode.soundlibs</groupId>
+        <groupId>ink.meodinger.soundlibs</groupId>
+        <artifactId>soundlibs-module</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
     <artifactId>mp3spi</artifactId>
     <version>1.9.5-SNAPSHOT</version>
     <packaging>bundle</packaging>
     <name>MP3SPI</name>
     <description>Maven artifact for MP3SPI library. http://www.javazoom.net/mp3spi/mp3spi.html</description>
+
     <developers>
         <developer>
             <name>JavaZoom</name>
@@ -29,8 +39,14 @@
             <roles>
                 <role>Packager</role>
             </roles>
-       </developer>
-        
+        </developer>
+        <developer>
+            <name>Meodinger Wang</name>
+            <email>me@meodinger.ink</email>
+            <roles>
+                <role>Packager</role>
+            </roles>
+        </developer>
     </developers>
       
     <build>
@@ -47,6 +63,7 @@
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
+                <version>5.1.2</version>
                 <configuration>
                     <instructions>
                         <SPI-Provider>javax.sound.sampled.AudioSystem</SPI-Provider>
@@ -64,18 +81,15 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.googlecode.soundlibs</groupId>
+            <groupId>ink.meodinger.soundlibs</groupId>
             <artifactId>jlayer</artifactId>
             <version>1.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>com.googlecode.soundlibs</groupId>
+            <groupId>ink.meodinger.soundlibs</groupId>
             <artifactId>tritonus-share</artifactId>
             <version>0.3.7-SNAPSHOT</version>
         </dependency>        
     </dependencies>
-  
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+
 </project>

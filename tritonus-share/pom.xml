@@ -1,11 +1,20 @@
 <?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
+
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
-        <artifactId>soundlibs</artifactId>
-        <groupId>com.googlecode.soundlibs</groupId>
+        <artifactId>soundlibs-module</artifactId>
+        <groupId>ink.meodinger.soundlibs</groupId>
         <version>1-SNAPSHOT</version>
     </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
     <artifactId>tritonus-share</artifactId>
     <version>0.3.7-SNAPSHOT</version>
@@ -19,7 +28,7 @@
             <organizationUrl>http://tritonus.org</organizationUrl>
             <roles><role>Original Author</role></roles>            
             <url>http://www.bomers.de</url>
-         </developer>
+        </developer>
         <developer>
             <name>Patrik Duditš</name>
             <email>soundlibs@dudits.net</email>
@@ -27,14 +36,23 @@
             <roles>
                 <role>Packager</role>
             </roles>
-       </developer>         
+        </developer>
+        <developer>
+            <name>Meodinger Wang</name>
+            <email>me@meodinger.ink</email>
+            <roles>
+                <role>Packager</role>
+            </roles>
+        </developer>
     </developers>
       
     <build>
-        <sourceDirectory>../tritonus-cvs/src/classes</sourceDirectory>
+        <sourceDirectory>../tritonus-cvs/src/classes-share</sourceDirectory>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
                 <configuration>
                     <includes>
                         <include>org/tritonus/share/</include>
@@ -42,7 +60,9 @@
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
                 <configuration>
                     <includes>
                         <include>org/tritonus/share/</include>
@@ -50,10 +70,17 @@
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.3.1</version>
                 <configuration>
                     <subpackages>org.tritonus.share</subpackages>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>5.1.2</version>
             </plugin>
         </plugins>
     </build>

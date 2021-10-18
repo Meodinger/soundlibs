@@ -28,7 +28,7 @@
 
 package org.tritonus.midi.device.java;
 
-import sun.misc.Perf;
+import jdk.internal.perf.Perf;
 
 
 /** Sequencer clock based on sun.misc.Perf.
@@ -50,7 +50,7 @@ implements JavaSequencer.Clock
 
 	/**	Retrieve system time in microseconds.
 		This method retrieves the time by calling
-		{@link sun.misc.Perf}.
+		{@link jdk.internal.perf.Perf}.
 
 		@return the system time in microseconds
 	*/
