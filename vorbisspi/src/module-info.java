@@ -11,4 +11,6 @@ module soundlibs.vorbisspi {
     requires soundlibs.tritonus.share;
 
     exports javazoom.spi;
+    exports javazoom.spi.vorbis.sampled.convert;
+    exports javazoom.spi.vorbis.sampled.file;
 }

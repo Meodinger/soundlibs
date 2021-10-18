@@ -11,4 +11,7 @@ module soundlibs.mp3spi {
     requires soundlibs.tritonus.share;
 
     exports javazoom.spi;
+    exports javazoom.spi.mpeg.sampled.convert;
+    exports javazoom.spi.mpeg.sampled.file;
+    exports javazoom.spi.mpeg.sampled.file.tag;
 }

@@ -10,4 +10,5 @@ module soundlibs.jlayer {
     exports javazoom.jl.converter;
     exports javazoom.jl.decoder;
     exports javazoom.jl.player;
+    exports javazoom.jl.player.advanced;
 }
